@@ -3,122 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carta de Amor</title>
+<title>VIERNES 27 DE FEBRERO DE 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
 
 <style>
 
 body{
     margin:0;
     padding:0;
-    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-    font-family: 'Playfair Display', serif;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+    background:#0b0b1a;
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x:hidden;
     color:white;
 }
 
-/* VIDEO */
-.video-container{
-    margin-top:40px;
-    margin-bottom:40px;
-    box-shadow:0 0 40px rgba(255,255,255,0.2);
-    border-radius:20px;
+/* SECCIÓN VIDEO CON FONDO CINEMATOGRÁFICO */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     overflow:hidden;
 }
 
-/* CARTA */
-.carta{
-    width:85%;
-    max-width:900px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter: blur(20px);
-    padding:80px;
-    border-radius:30px;
-    box-shadow:0 0 60px rgba(0,0,0,0.6);
-    position:relative;
-    margin-bottom:80px;
+.hero iframe{
+    position:absolute;
+    width:120%;
+    height:120%;
+    filter: blur(25px) brightness(0.4);
+    pointer-events:none;
 }
 
-/* DECORACIÓN */
+.video-real{
+    position:relative;
+    z-index:2;
+    width:80%;
+    max-width:900px;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 0 60px rgba(0,0,0,0.8);
+}
+
+/* CARTA */
+
+.carta-container{
+    padding:120px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.carta{
+    max-width:900px;
+    width:90%;
+    padding:100px 80px;
+    border-radius:40px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(30px);
+    box-shadow:0 0 80px rgba(168,85,247,0.2);
+    position:relative;
+}
+
+/* BORDE LUMINOSO SUTIL */
+
 .carta::before{
     content:"";
     position:absolute;
-    top:-3px;
-    left:-3px;
-    right:-3px;
-    bottom:-3px;
-    border-radius:35px;
-    background: linear-gradient(45deg,#a855f7,#ff00cc,#9333ea);
+    inset:-2px;
+    border-radius:42px;
+    background:linear-gradient(45deg,#9333ea,#c084fc,#9333ea);
     z-index:-1;
-    filter: blur(20px);
-    opacity:0.6;
+    filter:blur(15px);
+    opacity:0.4;
 }
 
-/* TEXTO DE LA CARTA (VACÍO PARA QUE TÚ LO PONGAS) */
-.texto-carta{
-    font-size:22px;
-    line-height:1.8;
-    color:#f8f8f8;
-}
+/* NEÓN MORADO MUY FINO */
 
-/* NEÓN MORADO ESPECIAL */
 .neon-morado{
-    font-size:80px;
+    font-size:85px;
     text-align:center;
-    margin-bottom:40px;
-    color:#c084fc;
-    letter-spacing:4px;
+    margin-bottom:60px;
+    color:#d8b4fe;
+    letter-spacing:6px;
     text-shadow:
-        0 0 10px #c084fc,
-        0 0 20px #c084fc,
-        0 0 40px #a855f7,
-        0 0 80px #9333ea,
-        0 0 120px #7e22ce;
-    animation: latido 2.5s infinite ease-in-out;
+        0 0 8px #d8b4fe,
+        0 0 20px #a855f7,
+        0 0 40px #9333ea,
+        0 0 70px #7e22ce;
+    animation:brillo 3s infinite alternate;
 }
 
-@keyframes latido{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.05);}
+@keyframes brillo{
+    from{opacity:0.7;}
+    to{opacity:1;}
+}
+
+/* TEXTO DE LA CARTA (VACÍO) */
+
+.texto{
+    font-size:24px;
+    line-height:2;
+    letter-spacing:1px;
+    text-align:justify;
 }
 
 /* FRASES FINALES */
+
 .frases{
-    margin-top:70px;
+    margin-top:100px;
     text-align:center;
 }
 
 .frase-rosa{
-    font-size:32px;
-    font-family:'Great Vibes', cursive;
-    color:#ff4fd8;
+    font-family:'Parisienne', cursive;
+    font-size:40px;
+    color:#ff66cc;
     text-shadow:
-        0 0 10px #ff4fd8,
-        0 0 20px #ff4fd8,
-        0 0 40px #ff00cc;
-    margin-bottom:30px;
+        0 0 10px #ff66cc,
+        0 0 30px #ff00cc;
+    margin-bottom:40px;
 }
 
 .frase-teamo{
     font-size:28px;
     color:#c084fc;
     text-shadow:
-        0 0 10px #c084fc,
-        0 0 25px #a855f7,
-        0 0 50px #9333ea;
-    margin-bottom:35px;
+        0 0 15px #c084fc,
+        0 0 40px #9333ea;
+    margin-bottom:40px;
 }
 
 .frase-promesa{
     font-size:26px;
     color:#ffd700;
     text-shadow:
-        0 0 10px #ffd700,
-        0 0 25px #ffae00,
-        0 0 40px #ff8c00;
+        0 0 15px #ffd700,
+        0 0 40px #ffae00;
 }
 
 </style>
@@ -126,26 +149,32 @@ body{
 
 <body>
 
-<!-- VIDEO -->
-<div class="video-container">
-    <iframe width="900" height="500"
+<!-- VIDEO CON FONDO CINEMATOGRÁFICO -->
+<section class="hero">
+
+    <!-- FONDO DIFUMINADO -->
+    <iframe src="https://www.youtube.com/embed/HQJ3RpRCm1g?autoplay=1&mute=1&controls=0&loop=1&playlist=HQJ3RpRCm1g"
+    frameborder="0"></iframe>
+
+    <!-- VIDEO REAL CENTRADO -->
+    <div class="video-real">
+        <iframe width="100%" height="500"
         src="https://www.youtube.com/embed/HQJ3RpRCm1g"
-        title="YouTube video"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-    </iframe>
-</div>
+        allowfullscreen></iframe>
+    </div>
+
+</section>
 
 <!-- CARTA -->
+<section class="carta-container">
+
 <div class="carta">
 
-    <!-- NEÓN MORADO ESPECIAL (AQUÍ PUEDES PONER UNA PALABRA) -->
-    <div class="neon-morado">PARA TI NIÑA DE OJITOS LINDOS</div>
+    <div class="neon-morado">PARA TI NIÑA DE OJITOS CAFES LINDOS</div>
 
-    <!-- TEXTO DE LA CARTA (TÚ LO PONES) -->
-    <div class="texto-carta">
-      <p>Esta noche tiene algo distinto. El aire se siente más tibio, las estrellas parecen más brillantes y el silencio parece guardar un secreto que solo nosotros entendemos. Tal vez es porque mientras el mundo sigue girando, yo estoy aquí, pensando en ti, sintiendo cómo mi corazón late con una fuerza que solo tu nombre sabe provocar. <strong>Es un latido que resuena en cada rincón de mi ser, recordándome constantemente lo afortunado que soy por tenerte en mi vida.</strong>
+    <div class="texto">
+        <p>Esta noche tiene algo distinto. El aire se siente más tibio, las estrellas parecen más brillantes y el silencio parece guardar un secreto que solo nosotros entendemos. Tal vez es porque mientras el mundo sigue girando, yo estoy aquí, pensando en ti, sintiendo cómo mi corazón late con una fuerza que solo tu nombre sabe provocar. <strong>Es un latido que resuena en cada rincón de mi ser, recordándome constantemente lo afortunado que soy por tenerte en mi vida.</strong>
 
 No sé en qué momento pasaste de ser alguien especial a convertirte en mi pensamiento constante, en mi deseo más profundo, en la razón por la que sonrío sin darme cuenta cuando veo mi celular iluminado con tu mensaje. Solo sé que desde que llegaste, todo tiene más sentido, más color, más intensidad. <strong>Tu presencia ha sido como un faro en la oscuridad, guiándome hacia un lugar donde la felicidad y el amor florecen.</strong>
 
@@ -310,5 +339,7 @@ y con todo lo que siempre quiero ser para ti. 💙 </P>
 
 </div>
 
+</section>
+
 </body>
-</html>
+</html> 

@@ -5,143 +5,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VIERNES 27 DE FEBRERO DE 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Allura&display=swap" rel="stylesheet">
 
 <style>
 
 body{
     margin:0;
-    padding:0;
-    background:#0b0b1a;
-    font-family: 'Cormorant Garamond', serif;
-    overflow-x:hidden;
+    background: radial-gradient(circle at top,#1a0f2e,#0b0715 70%);
+    font-family:'Playfair Display', serif;
     color:white;
 }
 
-/* SECCIÓN VIDEO CON FONDO CINEMATOGRÁFICO */
+/* CONTENEDOR GENERAL */
 
-.hero{
-    position:relative;
-    width:100%;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:60px auto;
+    text-align:center;
 }
 
-.hero iframe{
-    position:absolute;
-    width:120%;
-    height:120%;
-    filter: blur(25px) brightness(0.4);
-    pointer-events:none;
-}
+/* VIDEO */
 
-.video-real{
-    position:relative;
-    z-index:2;
-    width:80%;
-    max-width:900px;
+.video-box{
     border-radius:25px;
     overflow:hidden;
-    box-shadow:0 0 60px rgba(0,0,0,0.8);
+    box-shadow:0 0 60px rgba(168,85,247,0.4);
+    margin-bottom:80px;
+}
+
+.video-box iframe{
+    width:100%;
+    height:500px;
+    display:block;
 }
 
 /* CARTA */
 
-.carta-container{
-    padding:120px 20px;
-    display:flex;
-    justify-content:center;
-}
-
 .carta{
-    max-width:900px;
-    width:90%;
-    padding:100px 80px;
-    border-radius:40px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(30px);
-    box-shadow:0 0 80px rgba(168,85,247,0.2);
+    padding:90px 70px;
+    border-radius:35px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(25px);
+    box-shadow:0 0 70px rgba(147,51,234,0.2);
     position:relative;
 }
 
-/* BORDE LUMINOSO SUTIL */
+/* BORDE ELEGANTE */
 
 .carta::before{
     content:"";
     position:absolute;
     inset:-2px;
-    border-radius:42px;
-    background:linear-gradient(45deg,#9333ea,#c084fc,#9333ea);
+    border-radius:38px;
+    background:linear-gradient(135deg,#7e22ce,#c084fc,#7e22ce);
     z-index:-1;
-    filter:blur(15px);
-    opacity:0.4;
+    filter:blur(12px);
+    opacity:0.5;
 }
 
-/* NEÓN MORADO MUY FINO */
+/* NEÓN MORADO PREMIUM */
 
-.neon-morado{
-    font-size:85px;
-    text-align:center;
-    margin-bottom:60px;
-    color:#d8b4fe;
+.neon{
+    font-size:75px;
     letter-spacing:6px;
+    margin-bottom:60px;
+    color:#e9d5ff;
     text-shadow:
-        0 0 8px #d8b4fe,
-        0 0 20px #a855f7,
-        0 0 40px #9333ea,
-        0 0 70px #7e22ce;
-    animation:brillo 3s infinite alternate;
+        0 0 10px #e9d5ff,
+        0 0 25px #a855f7,
+        0 0 50px #7e22ce;
 }
 
-@keyframes brillo{
-    from{opacity:0.7;}
-    to{opacity:1;}
-}
-
-/* TEXTO DE LA CARTA (VACÍO) */
+/* TEXTO VACÍO */
 
 .texto{
-    font-size:24px;
-    line-height:2;
-    letter-spacing:1px;
+    font-size:23px;
+    line-height:1.9;
     text-align:justify;
 }
 
-/* FRASES FINALES */
+/* FRASES */
 
 .frases{
-    margin-top:100px;
-    text-align:center;
+    margin-top:90px;
 }
 
 .frase-rosa{
-    font-family:'Parisienne', cursive;
-    font-size:40px;
-    color:#ff66cc;
+    font-family:'Allura', cursive;
+    font-size:38px;
+    color:#ff4fd8;
     text-shadow:
-        0 0 10px #ff66cc,
+        0 0 10px #ff4fd8,
         0 0 30px #ff00cc;
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
 .frase-teamo{
-    font-size:28px;
+    font-size:27px;
     color:#c084fc;
     text-shadow:
         0 0 15px #c084fc,
-        0 0 40px #9333ea;
-    margin-bottom:40px;
+        0 0 35px #9333ea;
+    margin-bottom:35px;
 }
 
 .frase-promesa{
-    font-size:26px;
+    font-size:25px;
     color:#ffd700;
     text-shadow:
-        0 0 15px #ffd700,
-        0 0 40px #ffae00;
+        0 0 12px #ffd700,
+        0 0 30px #ffae00;
 }
 
 </style>
@@ -149,32 +123,26 @@ body{
 
 <body>
 
-<!-- VIDEO CON FONDO CINEMATOGRÁFICO -->
-<section class="hero">
+<div class="container">
 
-    <!-- FONDO DIFUMINADO -->
-    <iframe src="https://www.youtube.com/embed/HQJ3RpRCm1g?autoplay=1&mute=1&controls=0&loop=1&playlist=HQJ3RpRCm1g"
-    frameborder="0"></iframe>
-
-    <!-- VIDEO REAL CENTRADO -->
-    <div class="video-real">
-        <iframe width="100%" height="500"
-        src="https://www.youtube.com/embed/HQJ3RpRCm1g"
-        frameborder="0"
-        allowfullscreen></iframe>
+    <!-- VIDEO FUNCIONAL -->
+    <div class="video-box">
+        <iframe 
+        src="https://www.youtube.com/embed/HQJ3RpRCm1g" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>
     </div>
 
-</section>
+    <!-- CARTA -->
+    <div class="carta">
 
-<!-- CARTA -->
-<section class="carta-container">
+        <div class="neon">PARA TI NIÑA DE OJITOS CAFES LINDOS</div>
 
-<div class="carta">
-
-    <div class="neon-morado">PARA TI NIÑA DE OJITOS CAFES LINDOS</div>
-
-    <div class="texto">
-        <p>Esta noche tiene algo distinto. El aire se siente más tibio, las estrellas parecen más brillantes y el silencio parece guardar un secreto que solo nosotros entendemos. Tal vez es porque mientras el mundo sigue girando, yo estoy aquí, pensando en ti, sintiendo cómo mi corazón late con una fuerza que solo tu nombre sabe provocar. <strong>Es un latido que resuena en cada rincón de mi ser, recordándome constantemente lo afortunado que soy por tenerte en mi vida.</strong>
+        <div class="texto">
+            <p>Esta noche tiene algo distinto. El aire se siente más tibio, las estrellas parecen más brillantes y el silencio parece guardar un secreto que solo nosotros entendemos. Tal vez es porque mientras el mundo sigue girando, yo estoy aquí, pensando en ti, sintiendo cómo mi corazón late con una fuerza que solo tu nombre sabe provocar. <strong>Es un latido que resuena en cada rincón de mi ser, recordándome constantemente lo afortunado que soy por tenerte en mi vida.</strong>
 
 No sé en qué momento pasaste de ser alguien especial a convertirte en mi pensamiento constante, en mi deseo más profundo, en la razón por la que sonrío sin darme cuenta cuando veo mi celular iluminado con tu mensaje. Solo sé que desde que llegaste, todo tiene más sentido, más color, más intensidad. <strong>Tu presencia ha sido como un faro en la oscuridad, guiándome hacia un lugar donde la felicidad y el amor florecen.</strong>
 
@@ -335,11 +303,11 @@ y con todo lo que siempre quiero ser para ti. 💙 </P>
             Te prometo un amor que florecerá en cada amanecer, una devoción que crecerá con cada desafío que enfrentemos juntos. Seré tu refugio en las tormentas y tu alegría en los días soleados, y en cada susurro de mi corazón, encontrarás la certeza de que eres mi todo. Juntos, escribiremos nuestra historia, llena de momentos inolvidables y sueños compartidos, donde cada latido será un testimonio de nuestro amor eterno.
         </div>
 
+        </div>
+
     </div>
 
 </div>
 
-</section>
-
 </body>
-</html> 
+</html>
